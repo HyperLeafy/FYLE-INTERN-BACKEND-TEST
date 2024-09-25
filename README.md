@@ -1,58 +1,22 @@
-# Fyle Backend Challenge
+## Assignment Completion
 
-## Who is this for?
+## Overview
+This repository contains the implementation of a Flask-based API for managing assignments, specifically tailored for a principal's role in an educational institution. 
 
-This challenge is meant for candidates who wish to intern at Fyle and work with our engineering team. You should be able to commit to at least 6 months of dedicated time for internship.
+## Running the Docker Image
+Here’s an updated section for the README that includes instructions on how to run the Docker image:
+Running the Docker Image
 
-## Why work at Fyle?
+To run the Docker image that you built for the application, follow these steps:
 
-Fyle is a fast-growing Expense Management SaaS product. We are ~40 strong engineering team at the moment. 
+    Build the Docker Image (if you haven't already):
 
-We are an extremely transparent organization. Check out our [careers page](https://careers.fylehq.com) that will give you a glimpse of what it is like to work at Fyle. Also, check out our Glassdoor reviews [here](https://www.glassdoor.co.in/Reviews/Fyle-Reviews-E1723235.htm). You can read stories from our teammates [here](https://stories.fylehq.com).
+    bash
 
+docker build -t assignment-api .
 
-## Challenge outline
+Run the Docker Container: Use the following command to run the Docker container:
 
-**You are allowed to use any online/AI tool such as ChatGPT, Gemini, etc. to complete the challenge. However, we expect you to fully understand the code and logic involved.**
+bash
 
-This challenge involves writing a backend service for a classroom. The challenge is described in detail [here](./Application.md)
-
-
-## What happens next?
-
-You will hear back within 48 hours from us via email. 
-
-
-## Installation
-
-1. Fork this repository to your github account
-2. Clone the forked repository and proceed with steps mentioned below
-
-### Install requirements
-
-```
-virtualenv env --python=python3.8
-source env/bin/activate
-pip install -r requirements.txt
-```
-### Reset DB
-
-```
-export FLASK_APP=core/server.py
-rm core/store.sqlite3
-flask db upgrade -d core/migrations/
-```
-### Start Server
-
-```
-bash run.sh
-```
-### Run Tests
-
-```
-pytest -vvv -s tests/
-
-# for test coverage report
-# pytest --cov
-# open htmlcov/index.html
-```
+docker run -d -p 5000:5000 --name assignment-api-container assignment-api
