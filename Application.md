@@ -219,7 +219,7 @@ response:
 
 You'll need to implement these APIs
 
-### GET /principal/assignments
+### GET /principal/assignments $
 
 List all submitted and graded assignments
 ```
@@ -243,7 +243,7 @@ response:
 }
 ```
 
-### GET /principal/teachers
+### GET /principal/teachers $
 
 List all the teachers
 ```
@@ -264,7 +264,7 @@ response:
 }
 ```
 
-### POST /principal/assignments/grade
+### POST /principal/assignments/grade $
 
 Grade or re-grade an assignment
 ```

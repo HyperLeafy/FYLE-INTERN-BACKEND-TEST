@@ -84,5 +84,6 @@ def test_assignment_resubmit_error(client, h_student_1):
         })
     error_response = response.json
     assert response.status_code == 400
+    print(error_response)
     assert error_response['error'] == 'FyleError'
     assert error_response["message"] == 'only a draft assignment can be submitted'

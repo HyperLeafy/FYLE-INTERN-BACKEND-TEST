@@ -80,7 +80,8 @@ def test_get_assignments_in_graded_state_for_each_student():
 
 def test_get_grade_A_assignments_for_teacher_with_max_grading():
     """Test to get count of grade A assignments for teacher which has graded maximum assignments"""
-
+    db.session.execute(text("DELETE FROM assignments;"))
+    
     # Read the SQL query from a file
     with open('tests/SQL/count_grade_A_assignments_by_teacher_with_max_grading.sql', encoding='utf8') as fo:
         sql = fo.read()
