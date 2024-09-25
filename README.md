@@ -8,15 +8,7 @@ Here’s an updated section for the README that includes instructions on how to 
 Running the Docker Image
 
 To run the Docker image that you built for the application, follow these steps:
-
-    Build the Docker Image (if you haven't already):
-
-    bash
-
-docker build -t assignment-api .
+ `docker build -t assignment-api .`
 
 Run the Docker Container: Use the following command to run the Docker container:
-
-bash
-
-docker run -d -p 5000:5000 --name assignment-api-container assignment-api
+ `docker run -d -p 5000:5000 --name assignment-api-container assignment-api`
